@@ -1,0 +1,60 @@
+{
+  "pubsub":[{
+    "id": 1,
+     "projectId": "sistema"
+  }],
+  "topics": [
+    {
+      "id": 1,
+      "topic":"topic-1",
+      "projectId": "sistema"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "subscription":"subscription-1",
+      "topic": "topic-1",
+      "projectId": "sistema"
+    }
+  ],
+  "subscribers": [
+    {
+      "id": 1,
+      "subscription": "subscription-1",
+      "receiveSettingsMaxExtension": -1,
+      "receiveSettingsMaxExtensionPeriod": -1,
+      "receiveSettingsMaxOutstandingMessages": 3,
+      "receiveSettingsMaxOutstandingBytes": 1000,
+      "receiveSettingsNumGoroutines": 2,
+      "receiveSettingsSynchronous": false
+    }
+  ],
+  "publishers": [
+    {
+      "id":1,
+      "topic": "topic-1"
+    }
+  ],
+  "events" : [
+    {
+      "filters": {
+        "attributes": 
+         {
+           "eventName": "creation",
+           "eventType": "inbound"
+         }
+      },
+      "output" :
+        {
+          "attributes": 
+            {
+             "eventName": "notification",
+             "eventType":"outbound"
+            }
+        },
+      "subscriber": 1,
+      "publisher": 1
+    }
+  ]
+}
